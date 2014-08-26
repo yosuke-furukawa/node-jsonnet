@@ -5,7 +5,7 @@ var path = require('path');
 var assert = require('power-assert');
 
 describe('jsonnet', function(){
-  this.timeout(5000);
+  this.timeout(10000);
   before('create jsonnet', function() {
     jsonnet = new Jsonnet();
   });
