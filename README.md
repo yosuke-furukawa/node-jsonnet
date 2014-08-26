@@ -1,6 +1,8 @@
 node-jsonnet
 =====================
 
+[![Build Status](https://travis-ci.org/yosuke-furukawa/node-jsonnet.svg?branch=master)](https://travis-ci.org/yosuke-furukawa/node-jsonnet)
+
 [jsonnet](http://google.github.io/jsonnet/doc/index.html) is a DSL for JSON. Jsonnet is created by Google.
 
 This module is a Jsonnet wrapper for Node.js
