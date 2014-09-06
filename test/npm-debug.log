@@ -1,0 +1,20 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/furukawa.yosuke/.nodebrew/current/bin/node',
+1 verbose cli   '/Users/furukawa.yosuke/.nodebrew/current/bin/npm',
+1 verbose cli   'test' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose node symlink /Users/furukawa.yosuke/.nodebrew/current/bin/node
+5 error Error: ENOENT, open '/Users/furukawa.yosuke/Program/node-jsonnet/test/package.json'
+6 error If you need help, you may report this *entire* log,
+6 error including the npm and node versions, at:
+6 error     <http://github.com/npm/npm/issues>
+7 error System Darwin 13.3.0
+8 error command "/Users/furukawa.yosuke/.nodebrew/current/bin/node" "/Users/furukawa.yosuke/.nodebrew/current/bin/npm" "test"
+9 error cwd /Users/furukawa.yosuke/Program/node-jsonnet/test
+10 error node -v v0.10.28
+11 error npm -v 1.4.9
+12 error path /Users/furukawa.yosuke/Program/node-jsonnet/test/package.json
+13 error code ENOENT
+14 error errno 34
+15 verbose exit [ 34, true ]

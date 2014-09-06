@@ -1,5 +1,5 @@
 {
-  "name": "node-jsonnet",
+  "name": "jsonnet",
   "version": "0.5.0-beta",
   "description": "jsonnet wrapper for Node.js",
   "main": "index.js",

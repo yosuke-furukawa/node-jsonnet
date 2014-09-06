@@ -5,6 +5,12 @@ var path = require('path');
 var assert = require('power-assert');
 
 describe('jsonnet', function(){
+  before('create jsonnet', function() {
+    jsonnet = new Jsonnet();
+  });
+  after('destroy jsonnet', function() {
+    jsonnet.destroy();
+  })
   describe('#eval()', function(){
     it('should return json', function(){
       var filepath = path.join(__dirname, 'src' , 'simple.jsonnet');
