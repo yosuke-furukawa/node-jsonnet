@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+# The command to execute in the container is the command "name" we were called
+# with. The intended use is for soft links to point to this file with names
+# like "npm". That would execute npm inside the container.
+EXEC_CMD=$(basename $0)
+
+# Set the path explicitly. Include node_modules/.bin. So that way a soft link
+# to this file called "gulp" will execute the gulp in node_modules/.bin
+CTR_PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:./node_modules/.bin
+
+# NOTE: unset obnoxious NPM_CONFIG_LOGLEVEL so .npmrc can take effect if
+#       desired
+docker run -i -t --rm -e NPM_CONFIG_LOGLEVEL -e "PATH=${CTR_PATH}" -w /src "-v$PWD:/src" ${N8_ARGS:-} node:8 "$EXEC_CMD" "$@"
