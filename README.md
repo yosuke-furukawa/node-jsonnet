@@ -1,28 +1,47 @@
-node-jsonnet
-=====================
+# node-jsonnet
+
 This is an updated fork of the [NPM jsonnet package](https://www.npmjs.com/package/jsonnet).
 
 [jsonnet](http:jsonnet.org) is a DSL for JSON. Jsonnet is created by Google.
 
 This module is a Jsonnet wrapper for Node.js created with [Emscripten](http://kripken.github.io/emscripten-site/).
 
-Jsonnet demo
----------------------
+## Install
 
-before:
+```console
+$ npm install @unboundedsystems/jsonnet
+```
 
-```json
-// Jsonnet Example
+A Typescript definition file is included, so no need to install anything
+from @types
+
+
+## Usage
+
+```js
+const jsonnet = require('@unboundedsystems/jsonnet');
+
+const myTemplate = `
 {
     person1: {
         name: "Alice",
         welcome: "Hello " + self.name + "!",
     },
     person2: self.person1 { name: "Bob" },
-}
+}`;
+
+// You only need to create one Jsonnet object and can then call eval()
+// repeatedly.
+const jsonnetVm = new jsonnet.Jsonnet();
+const output = jsonnetVm.eval(myTemplate);
+
+console.log(JSON.stringify(output, null, 2));
+
+// The jsonnetVm object needs to be destroyed manually.
+jsonnetVm.destroy();
 ```
 
-after:
+### Output:
 
 ```json
 {
@@ -37,28 +56,7 @@ after:
 }
 ```
 
-If you would like to know more Jsonnet syntax, read here.
+## References
 
-[http://google.github.io/jsonnet/doc/spec.html](http://google.github.io/jsonnet/doc/spec.html)
+* [Jsonnet specification](http://jsonnet.org/language/spec.html)
 
-How to use
---------------------
-
-```shell
-$ npm install jsonnet --save
-```
-
-```javascript
-
-var Jsonnet = require('jsonnet');
-// instance jsonnet
-var jsonnet = new Jsonnet();
-var fs = require('fs');
-
-var code = fs.readFileSync("./menu.jsonnet");
-
-// eval jsonnet to javascript object
-var result = jsonnet.eval(code);
-
-console.log(result);
-```

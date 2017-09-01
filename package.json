@@ -1,6 +1,6 @@
 {
   "name": "@unboundedsystems/jsonnet",
-  "version": "0.9.4-rc2",
+  "version": "0.9.4-rc3",
   "description": "jsonnet wrapper for Node.js",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
