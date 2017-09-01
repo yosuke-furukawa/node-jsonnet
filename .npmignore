@@ -1,0 +1,5 @@
+cpp_src/
+bin/
+build/
+.emscripten_cache/
+.emscripten_cache.lock
