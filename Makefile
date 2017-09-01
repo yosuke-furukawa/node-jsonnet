@@ -29,3 +29,7 @@ $(DOCKER_BUILT): emscripten/Dockerfile $(BUILD)
 .PHONY: clean
 clean:
 	rm -rf $(CLEANS)
+
+.PHONY: publish
+publish: all
+	npm publish --access=public
