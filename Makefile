@@ -14,10 +14,13 @@ CLEANS:=$(BUILD) $(DIST)/$(JS_OUT) $(CPP_DIR)/$(JS_OUT)
 .PHONY: all
 all: $(DIST)/$(JS_OUT)
 
-$(DIST)/$(JS_OUT): $(DOCKER_BUILT)
+$(DIST)/$(JS_OUT): $(DOCKER_BUILT) Makefile $(CPP_DIR)/Makefile
 	# Run the jsonnet project Makefile that builds the .js
 	docker run --rm -it -v"$${PWD}:/src" emscripten /bin/bash -c ". /emsdk-portable/emsdk_env.sh && make -C $(CPP_DIR) $(JS_OUT)"
 	cp $(CPP_DIR)/$(JS_OUT) $(DIST)/$(JS_OUT)
+
+$(CPP_DIR)/Makefile:
+	git submodule update --init --recursive
 
 $(BUILD):
 	mkdir $@
