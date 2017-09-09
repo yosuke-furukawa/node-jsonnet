@@ -6,4 +6,5 @@ declare module '@unboundedsystems/jsonnet' {
         destroy(): void;
     }
     export default Jsonnet;
+    export const FS:any;
 }
