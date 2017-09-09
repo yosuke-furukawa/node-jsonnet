@@ -60,3 +60,41 @@ jsonnetVm.destroy();
 
 * [Jsonnet specification](http://jsonnet.org/language/spec.html)
 
+## Building & Publishing
+
+### Ensure you have the following tools installed:
+  * GNU make
+  * Docker
+
+### Build
+
+```console
+host$ make
+```
+### Publish
+NOTE: This part needs better automation. Feel free to fix. :)
+1. Run bash in the node container. Note the leading "./" and also note
+    that your prompt in the container will have a different randomly
+    generated hostname.
+
+    ```console
+    host$ ./bin/bash
+    root@55382dc5d87f:/src#
+    ```
+2. Enter your npmjs.com credentials
+
+    ```console
+    root@55382dc5d87f:/src# npm login
+    Username: someuser
+    Password: 
+    Email: (this IS public) someuser@example.com
+    Logged in as someuser on https://registry.npmjs.org/.
+    ```
+3. Actually publish
+
+    ```console
+    root@55382dc5d87f:/src# make publish
+    npm publish --access=public
+    + @unboundedsystems/jsonnet@0.9.4-rc5
+    ```
+
