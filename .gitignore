@@ -2,5 +2,6 @@ node_modules/
 *.swp
 *.swo
 build/
+lib/libjsonnet.js
 .emscripten_cache.lock
 .emscripten_cache/
