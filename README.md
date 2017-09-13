@@ -1,11 +1,10 @@
 node-jsonnet
 =====================
+This is an updated fork of the [NPM jsonnet package](https://www.npmjs.com/package/jsonnet).
 
-[![Build Status](https://travis-ci.org/yosuke-furukawa/node-jsonnet.svg?branch=master)](https://travis-ci.org/yosuke-furukawa/node-jsonnet)
+[jsonnet](http:jsonnet.org) is a DSL for JSON. Jsonnet is created by Google.
 
-[jsonnet](http://google.github.io/jsonnet/doc/index.html) is a DSL for JSON. Jsonnet is created by Google.
-
-This module is a Jsonnet wrapper for Node.js
+This module is a Jsonnet wrapper for Node.js created with [Emscripten](http://kripken.github.io/emscripten-site/).
 
 Jsonnet demo
 ---------------------
