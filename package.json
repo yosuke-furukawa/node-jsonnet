@@ -1,32 +1,32 @@
 {
-  "name": "jsonnet",
-  "version": "0.5.0-beta",
+  "name": "@unboundedsystems/jsonnet",
+  "version": "0.9.4-rc6",
   "description": "jsonnet wrapper for Node.js",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "directories": {
-    "test": "test"
+    "test": "test/"
   },
   "scripts": {
     "test": "mocha --require intelli-espower-loader"
   },
-  "directories": {
-    "test": "test/"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yosuke-furukawa/node-jsonnet"
+    "url": "https://github.com/unboundedsystems/node-jsonnet"
   },
   "keywords": [
     "jsonnet",
     "json"
   ],
   "author": "yosuke-furukawa",
+  "contributors": [
+    "Unbounded Systems"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yosuke-furukawa/node-jsonnet/issues"
+    "url": "https://github.com/unboundedsystems/node-jsonnet/issues"
   },
-  "homepage": "https://github.com/yosuke-furukawa/node-jsonnet",
-  "dependencies": {
+  "devDependencies": {
     "espower-loader": "^0.8.0",
     "intelli-espower-loader": "^0.3.0",
     "mocha": "^1.21.4",

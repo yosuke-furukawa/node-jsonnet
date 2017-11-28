@@ -1,4 +1,4 @@
-var Jsonnet = require("../index");
+var Jsonnet = require("../lib/index");
 var jsonnet = new Jsonnet();
 var fs = require('fs');
 var path = require('path');
@@ -14,7 +14,8 @@ describe('jsonnet', function(){
   describe('#eval()', function(){
     it('should return json', function(){
       var filepath = path.join(__dirname, 'src' , 'simple.jsonnet');
-      var code = fs.readFileSync(filepath);
+      var code = fs.readFileSync(filepath).toString();
+      console.log(code);
       var result = jsonnet.eval(code);
       var expected = {
         "person1": {

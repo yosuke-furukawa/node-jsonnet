@@ -1,4 +1,4 @@
-var Jsonnet = require("../index");
+var Jsonnet = require("../lib/index");
 var jsonnet = null;
 var fs = require('fs');
 var path = require('path');

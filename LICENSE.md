@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
 Copyright (c) 2014 yosuke-furukawa
+Additions copyright (c) 2017 Unbounded Systems, LLC.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
