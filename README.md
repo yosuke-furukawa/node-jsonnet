@@ -12,7 +12,7 @@ Jsonnet demo
 
 before:
 
-```json
+```js
 // Jsonnet Example
 {
   person1: {
